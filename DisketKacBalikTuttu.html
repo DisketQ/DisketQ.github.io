@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<meta charset="utf-8">
+<body style="background: black">
+<div style="background: black">
+    <p style="color: white">
+        Disket Kaç Balık Tuttu?
+    </p>
+    <p id="x1" style="color: white">
+        Disket Kaç Balık Tuttu?
+    </p>
+  
+</div>
+
+<script>
+    
+    getText("balikdata.txt");
+    async function getText(file){
+        
+        let x = await fetch(file);
+        let y = await x.text();
+        
+        document.getElementById('x1').innerHTML = y;
+    }
+  
+    
+</script>
+
+
+</body>
+</html>
