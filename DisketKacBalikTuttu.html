@@ -1,29 +1,207 @@
 <!DOCTYPE html>
 <html lang="tr">
 <meta charset="utf-8">
+<style>
+    .lowSaturationText {
+        color: #dddddd;
+        font-family: Impact,serif;
+        padding: 10px 5px 10px 5px;
+        border-color: black;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    .medSaturationText {
+        color: #ffffff;
+        font-family: Impact,serif;
+        font-size: large;
+        padding: 5px;
+        border-color: black;
+        border-width: 3px;
+        border-style: solid;
+    }
+
+    .mainDiv {
+        background-color: black;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 5%;
+        row-gap: 5%;
+        padding: 10px;
+        max-width: 600px;
+        min-width: 300px;
+        margin: auto;
+    }
+    
+    .midDiv {
+        background-color: #131313;
+        display: table;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #353535;
+    }
+
+    .bottomDiv {
+        background-color: #353535;
+        text-align: center;
+        max-width: 120px;
+        min-width: 70px;
+        margin: -9px 5px;
+    }
+</style>
+
 <body style="background: black">
-<div style="background: black">
-    <p style="color: white">
-        Disket Kaç Balık Tuttu?
-    </p>
-    <p id="x1" style="color: white">
-        Disket Kaç Balık Tuttu?
-    </p>
-  
+
+<div class="midDiv" style="margin: auto auto 30px;">
+    <h1 class="medSaturationText" style= "border-width: 0; font-size: x-large; text-align: center; margin: 10px">Disket İstatistikler</h1>
+</div>
+<div class="midDiv" style=" margin: auto auto 20px">
+    <h1 class="medSaturationText" style="border-width: 0; font-size: x-large; text-align: center; margin: 10px">Warframe</h1>
 </div>
 
-<script>
+<div class="mainDiv">
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" id="fishCountText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                Toplam Balık
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
     
-    getText("balikdata.txt");
+</div>
+
+
+
+
+<script>
+    refreshUI();
+    async function refreshUI()
+    {
+        let text = await getText("balikdata.txt");
+        document.getElementById('fishCountText').innerHTML = text;
+    }
     async function getText(file){
         
         let x = await fetch(file);
         let y = await x.text();
         
-        document.getElementById('x1').innerHTML = y;
+        return y;
     }
-  
-    
 </script>
 
 
