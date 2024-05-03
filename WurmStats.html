@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<meta charset="utf-8">
+<link rel="stylesheet" href="CSS/StatsStyle.css">
+
+<body style="background: black">
+<!--
+<div class="midDiv"  style="margin: auto auto 30px;">
+    <h1 class="medSaturationText" style=  " min-width: 200px;  -webkit-text-stroke-color: black; -webkit-text-stroke-width: thin; border-width: 0; font-size: x-large; text-align: center; margin: 10px">Disket İstatistikler</h1>
+</div>
+<div class="midDiv" style=" margin: auto auto 20px">
+    <h1 class="medSaturationText" style=" -webkit-text-stroke-color: black; -webkit-text-stroke-width: thin; border-width: 0; font-size: x-large; text-align: center; margin: 10px">Warframe</h1>
+</div>
+-->
+<div class="mainDiv">
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" id="fishCountText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    <div class="midDiv">
+        <div class="bottomDiv">
+            <p class="lowSaturationText">
+                WIP
+            </p>
+        </div>
+        <div class="bottomDiv">
+            <p class="medSaturationText" style="color: white">0</p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<script>
+    <!--refreshUI();-->
+    async function refreshUI()
+    {
+        let text = await getText("Stats/totalfish.txt");
+        document.getElementById('fishCountText').innerHTML = text;
+    }
+    async function getText(file){
+        
+        let x = await fetch(file);
+        let y = await x.text();
+        
+        return y;
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<meta charset="utf-8">
+<link rel="stylesheet" href="CSS/StatsStyle.css">
+
+<body style="background: black">
+
+<div class="midDiv"  style="margin: auto auto 30px;">
+    <h1 class="medSaturationText" style=  " min-width: 200px;  -webkit-text-stroke-color: black; -webkit-text-stroke-width: thin; border-width: 0; font-size: x-large; text-align: center; margin: 10px">Disket Stats</h1>
+</div>
+<!--
+<button class="routeButton" style="margin: 50px auto ">
+    Personal
+</button>
+-->
+<div class="mainDiv" style="grid-template-columns: auto auto auto;">
+    <button type="button" onclick="changeIFrameSource('WarframeStats.html')" class="routeButton" style=" margin: auto auto 20px;">
+        Warframe
+    </button>
+    <button type="button" onclick="changeIFrameSource('WurmStats.html')" class="routeButton" style=" margin: auto auto 20px;">
+        Wurm
+    </button>
+    <button type="button" onclick="changeIFrameSource('WarframeStats.html')" class="routeButton" style=" margin: auto auto 20px;">
+        Personal
+    </button>
+</div>
+<iframe id="statsSource" src="WarframeStats.html" class="mainDiv" style="border-color: black; min-width: 600px; min-height: 500px">
+    
+</iframe>
+
+
+
+
+<script>
+    refreshUI();
+    async function refreshUI()
+    {
+        let text = await getText("balikdata.txt");
+        document.getElementById('fishCountText').innerHTML = text;
+    }
+    async function getText(file)
+    {
+        
+        let x = await fetch(file);
+        let y = await x.text();
+        
+        return y;
+    }
+    
+    function changeIFrameSource(url)
+    {
+        document.getElementById('statsSource').src = url;
+    }
+</script>
+
+
+</body>
+</html>
