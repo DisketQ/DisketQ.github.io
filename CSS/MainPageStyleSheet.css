@@ -1,0 +1,543 @@
+﻿:root{
+    --maingrey: #222831;
+    --maincyan: #87FFFF;
+    --maincyanbrighter: #73FBFD;
+    --mainred: #FF6060;
+    --brightred: #F05650;
+    --frontgrey:#323740;
+    --maingreen: #75F94C;
+    --mainorange: #F29D38;
+    --mainpurple: #8566FF;
+    --mainblue: #52A1FF;
+    --darkpurple: #1F1E26;
+    --darkgrey: #252525;
+    
+}
+
+.body{
+    margin: 0;
+    background-color: var(--maingrey);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.navBar{
+    background-color: var(--frontgrey);
+    text-align: center;
+    align-items: center;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    width: 750px;
+    height: 75px;
+    border-radius: 0.95vmax;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 20px;
+}
+
+
+.navBarButton{
+    min-height: 10%;
+    border-color: transparent;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "League Spartan", sans-serif;
+    height: 100%;
+    width: 18.5vmax;
+    margin-top: 1.2%;
+
+}
+
+.navBarButton:hover{
+    font-size: 25px;
+    border-radius: 0.8vmax;
+    color: var(--maincyanbrighter);
+    text-shadow: var(--maincyanbrighter) 0 0 6px;
+    height: 85%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px, var(--maincyanbrighter) 0 4px 0;
+    animation: godownanimation 0.2s alternate;
+    animation-fill-mode: forwards;
+    background-color: var(--frontgrey);
+}
+
+@keyframes godownanimation {
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .navBar {
+        width: 350px;
+        height: 50px;
+        border-radius: 0.75vmax;
+    }
+
+    .navBarButton {
+        font-size: 14px;
+        width: 80vmin;
+        margin-top: 2%;
+     
+    }
+}
+
+
+
+/*section1*/
+
+.section1container{
+    
+}
+
+.section1{
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    opacity: 100%;
+    background-image: linear-gradient(-60deg, var(--mainpurple) -200%,transparent 40%), linear-gradient(60deg, var(--maingreen) -200%,var(--maingrey) 30%);
+    /*box-shadow: var(--darkgrey) 0 8px 4px;*/
+}
+
+.section1finish{
+    height: 160px;
+    stroke: var(--maingrey) 0 0 5px 5px;
+    box-shadow: rgba(0,0,0,25%) 0 0 30px 4px ;
+    position: relative;
+    z-index: 2;
+
+}
+
+.middleSection1{
+    background-color: transparent;
+    height: 100%;
+    flex: 1;
+    display: grid;
+    row-span: 4;
+    justify-content: center;
+    min-width: 550px;
+    max-width: 550px;
+    
+}
+
+.sideSection1, .sideSection2{
+    background-color: transparent;
+    height: 100%;
+    flex: 1;
+    display: inline-grid;
+    column-count: 1;
+    row-gap: 20px;
+    align-content: start;
+    grid-template-rows: 380px 180px 140px;
+}
+
+.sideSection1{
+    justify-items: right;
+}
+
+.sideSection2{
+    justify-items: left;
+    
+}
+
+.mainBubble, .sideBubbleBig,.sideBubbleMedium,.sideBubbleSmall{
+    border-radius: 50%;
+    background-color: var(--frontgrey);
+    align-content: center;
+    text-align: center;
+    animation-name: floatanimation;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    z-index: 1;
+    
+}
+
+.mainBubble{
+    margin-top: 160px;
+    width: 420px;
+    height: 420px;;
+    justify-self: center;
+    border-style: solid;
+    border-color: var(--maingrey);
+    border-width: 10px;
+    box-shadow:  var(--maincyanbrighter) 5px 10px 0,var(--maincyanbrighter) -5px 10px 0, var(--maincyanbrighter) 0 0 20px 0px;
+    
+}
+
+.sideBubbleBig{
+    width: 204px;
+    height: 204px;
+    align-self: end;
+}
+
+.sideBubbleMedium{
+    width: 154px;
+    height: 154px;
+    align-self: center;
+}
+
+.sideBubbleSmall{
+    width: 131px;
+    height: 131px;
+    align-self: end;
+}
+
+#sideBubbleBigLeft{
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--maincyanbrighter) -10px 10px 0, var(--maincyanbrighter) -10px 10px 60px -12px;
+    animation-name: floatanimationreverse;
+    
+}
+#sideBubbleBigRight{
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainorange) 10px 10px 0, var(--mainorange) 10px 10px 60px -12px;
+    animation-name: floatanimation;
+}
+
+#sideBubbleMediumLeft{
+    margin-right: 160px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--brightred) -8px 8px 0, var(--mainred) -10px 10px 60px -12px;
+    animation-name: floatanimation2reverse;
+}
+
+#sideBubbleMediumRight{
+    margin-left: 160px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainpurple) 8px 8px 0, var(--mainpurple) 10px 10px 60px -12px;
+    animation-name: floatanimation2;
+}
+
+#sideBubbleSmallLeft{
+    margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--maingreen) -6px 6px 0, var(--maingreen) -10px 10px 60px -12px;
+    animation-name: floatanimation3reverse;
+}
+
+#sideBubbleSmallRight{
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainblue) 6px 6px 0, var(--mainblue) 10px 10px 60px -12px;
+    animation-name: floatanimation3;
+}
+
+
+.mainText{
+    text-align: center;
+    font-family: "Squada One", sans-serif;
+    font-size: 83px;
+    color: white;
+    margin-top: -110px;
+}
+
+.mainDescription{
+    text-align: center;
+    font-family: "Squada One", sans-serif;
+    font-size: 66px;
+    color: white;
+    margin-top: -170px;
+    
+}
+
+/*section2*/
+
+.section2,.section3{
+    height: 1300px;
+    display: flex;
+    width: 100%;
+}
+
+.section2{
+    position: relative;
+    z-index: 0;
+    background-image: linear-gradient(-120deg, var(--mainpurple) -200%,transparent 40%), linear-gradient(120deg, var(--maingreen) -200%,var(--maingrey) 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2box{
+    width: 1540px;
+    height: 900px;
+    display: flex;
+    
+}
+
+/* section2 subsection1*/
+
+.section2boxsubsection1, .section2boxsubsection2{
+    box-shadow: rgba(0,0,0,25%) 0 0 30px 4px ;
+    height: 100%;
+}
+
+.section2boxsubsection1{
+    width: 354px;
+    background-color: var(--maingrey);
+    border-bottom-left-radius: 17px;
+    border-top-left-radius: 17px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section2textbox{
+    width: max-content;
+    height: max-content;
+    margin-top: 32px;
+}
+
+.section2maintext{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+
+}
+
+.section2maindescription{
+    font-family: "League Spartan", sans-serif;
+    text-align: center;
+    color:white;
+    font-size: 22px;
+
+}
+
+.section2servicecardcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+
+}
+
+.section2servicecard{
+    width: 240px;
+    height: 135px;
+    background-color: var(--frontgrey);
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,25%) 0 0 32px -7px ;
+    margin-bottom: 45px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 30px;
+}
+
+.section2servicecard:hover{
+  display: none;
+}
+
+/*section2 subsection2*/
+
+
+.section2boxsubsection2{
+    width: 1185px;
+    background-color: var(--frontgrey);
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
+    display: flex;
+    column-gap: 35px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.gallerycontainer{
+    background-color: transparent;
+    width: 240px;
+    height: 770px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.gallerytext{
+    font-family: "League Spartan",sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+.gallerycard{
+    background-color: var(--maingrey);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallerybutton{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: "League Spartan",sans-serif;
+    color: var(--frontgrey);
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+    border-color: transparent;
+}
+
+.gallerybutton:hover{
+    transform: scale(110%);
+}
+
+
+
+
+@keyframes floatanimation {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(-5px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes floatanimationreverse {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(-5px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes floatanimation2 {
+    0% {transform: translateY(0) translateX(0)}
+    50% {transform: translateY(-10px) translateX(5px)}
+    100% {transform: translateY(0) translateX(0)}
+}
+
+@keyframes floatanimation2reverse {
+    0% {transform: translateY(0) translateX(0)}
+    50% {transform: translateY(-10px) translateX(-5px)}
+    100% {transform: translateY(0) translateX(0)}
+}
+
+
+@keyframes floatanimation3 {
+    0% {transform: translateY(0) translateX(0) scale(100%)}
+    50% {transform: translateY(-10px) translateX(-5px) scale(100%)}
+    100% {transform: translateY(0) translateX(0) scale(100%)}
+}
+
+
+@keyframes floatanimation3reverse {
+    0% {transform: translateY(0) translateX(0) scale(100%)}
+    50% {transform: translateY(-10px) translateX(5px) scale(100%)}
+    100% {transform: translateY(0) translateX(0) scale(100%)}
+}
+
+
+.cyantext{
+    color: var(--maincyanbrighter);
+    text-shadow: var(--maincyanbrighter) 0 0 3px;
+}
+
+.redtext{
+    color: var(--mainred);
+    text-shadow: var(--mainred) 0 0 3px;
+}
+
+.greentext{
+    color: var(--maingreen);
+    text-shadow: var(--maingreen) 0 0 3px;
+}
+
+.orangetext{
+    color: var(--mainorange);
+    text-shadow: var(--mainorange) 0 0 3px;
+}
+
+.cyanbackground{
+    background-color: var(--maincyanbrighter);
+}
+
+.redbackground{
+    background-color: var(--mainred);
+}
+
+.greenbackground{
+    background-color: var(--maingreen);
+}
+
+.orangebackground{
+    background-color: var(--mainorange);
+}
+
+/* Slider */
+
+
+.doublesidedgradient{
+    background: linear-gradient(90deg,transparent 80%,var(--maingrey) 100%), linear-gradient(-90deg,transparent 80%,var(--maingrey) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.slider {
+    overflow: hidden;
+    
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bannermove 40s linear infinite;
+    height: 100%;
+}
+
+
+.slidecontainer {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    height: 100%;
+}
+
+.banner {
+  
+}
+
+.bannercontainer {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    margin: 25px;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
