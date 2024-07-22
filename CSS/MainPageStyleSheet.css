@@ -77,20 +77,24 @@
     }
 }
 
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 920px) {
 
     .navBar {
-        width: 350px;
-        height: 50px;
-        border-radius: 0.75vmax;
+        width: 80vw;
+        height: 8vw;
+        border-radius: 1vw;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+    .navBarButton {
+        font-size: 2.7vw;
     }
 
-    .navBarButton {
-        font-size: 14px;
-        width: 80vmin;
-        margin-top: 2%;
-     
+    .navBarButton:hover{
+        font-size: 3vw;
     }
 }
 
@@ -99,8 +103,9 @@
 /*section1*/
 
 .section1container{
-    
+    width: 100%;
 }
+
 
 .section1{
     height: 1000px;
@@ -110,8 +115,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-
-    opacity: 100%;
+    min-height: 500px;
     background-image: linear-gradient(-60deg, var(--mainpurple) -200%,transparent 40%), linear-gradient(60deg, var(--maingreen) -200%,var(--maingrey) 30%);
     /*box-shadow: var(--darkgrey) 0 8px 4px;*/
 }
@@ -125,37 +129,37 @@
 
 }
 
-.middleSection1{
+.middleSection{
     background-color: transparent;
     height: 100%;
-    flex: 1;
-    display: grid;
-    row-span: 4;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     min-width: 550px;
     max-width: 550px;
+    row-gap: 23px;
     
 }
 
-.sideSection1, .sideSection2{
-    background-color: transparent;
+.sideSection1,.sideSection2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 40px;
+    margin-top: 350px;
     height: 100%;
-    flex: 1;
-    display: inline-grid;
-    column-count: 1;
-    row-gap: 20px;
-    align-content: start;
-    grid-template-rows: 380px 180px 140px;
-}
-
-.sideSection1{
-    justify-items: right;
 }
 
 .sideSection2{
-    justify-items: left;
-    
+    align-items: start;
 }
+
+.sideSection1{
+    align-items: end;
+}
+
+/*section1 bubbles*/
 
 .mainBubble, .sideBubbleBig,.sideBubbleMedium,.sideBubbleSmall{
     border-radius: 50%;
@@ -171,34 +175,32 @@
     
 }
 
+
 .mainBubble{
     margin-top: 160px;
     width: 420px;
-    height: 420px;;
-    justify-self: center;
+    height: 420px;
     border-style: solid;
     border-color: var(--maingrey);
     border-width: 10px;
     box-shadow:  var(--maincyanbrighter) 5px 10px 0,var(--maincyanbrighter) -5px 10px 0, var(--maincyanbrighter) 0 0 20px 0px;
-    
+    min-width: 150px;
+    min-height: 150px;
 }
 
 .sideBubbleBig{
     width: 204px;
     height: 204px;
-    align-self: end;
 }
 
 .sideBubbleMedium{
     width: 154px;
     height: 154px;
-    align-self: center;
 }
 
 .sideBubbleSmall{
     width: 131px;
     height: 131px;
-    align-self: end;
 }
 
 #sideBubbleBigLeft{
@@ -212,15 +214,17 @@
 }
 
 #sideBubbleMediumLeft{
-    margin-right: 160px;
+
     box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--brightred) -8px 8px 0, var(--mainred) -10px 10px 60px -12px;
     animation-name: floatanimation2reverse;
+    margin-right: 160px;
 }
 
 #sideBubbleMediumRight{
-    margin-left: 160px;
+
     box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainpurple) 8px 8px 0, var(--mainpurple) 10px 10px 60px -12px;
     animation-name: floatanimation2;
+    margin-left: 160px;
 }
 
 #sideBubbleSmallLeft{
@@ -235,13 +239,34 @@
     animation-name: floatanimation3;
 }
 
+.imgbig{
+    width: 137px;
+    height: 137px;
+}
+
+.imgmedium{
+    width: 93px;
+    height: 93px;
+}
+
+.imgsmall{
+    width: 70px;
+    height: 70px;
+}
+
+
+/*section1 text*/
+
+.section1textbox{
+    min-width: 500px;
+}
 
 .mainText{
     text-align: center;
     font-family: "Squada One", sans-serif;
     font-size: 83px;
     color: white;
-    margin-top: -110px;
+
 }
 
 .mainDescription{
@@ -249,22 +274,157 @@
     font-family: "Squada One", sans-serif;
     font-size: 66px;
     color: white;
-    margin-top: -170px;
+    margin-top: -13px;
+
     
+}
+
+@media only screen and (max-width: 1250px) {
+
+    .middleSection{
+        width: 45vw;
+        min-width: 45vw;
+    }
+    
+    .sideSection1,.sideSection2{
+        row-gap: 3.5vw;
+
+    }
+
+
+    .mainBubble{
+        height: 33.8vw;
+        width: 33.8vw;
+        box-shadow:  var(--maincyanbrighter) 0.4vw 0.9vw 0,var(--maincyanbrighter) -0.4vw 0.9vw 0, var(--maincyanbrighter) 0 0 20px 0px;
+        border-width: 0.85vw;
+    }
+
+    .sideBubbleBig{
+        width: 16.2vw;
+        height: 16.2vw;
+    }
+
+    .sideBubbleMedium{
+        width: 12.2vw;
+        height: 12.2vw;
+    }
+
+    .sideBubbleSmall{
+        width: 10.4vw;
+        height: 10.4vw;
+    }
+
+    .imgbig{
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .imgmedium{
+        width: 7.5vw;
+        height: 7.5vw;
+    }
+
+    .imgsmall{
+        width: 5.4vw;
+        height: 5.4vw;
+    }
+
+    #sideBubbleMediumLeft{
+        margin-right: 13vw;
+    }
+
+    #sideBubbleMediumRight{
+        margin-left: 13vw;
+    }
+
+    #sideBubbleBigLeft{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--maincyanbrighter) -0.85vw 0.85vw 0, var(--maincyanbrighter) -10px 10px 60px -12px;
+    }
+    #sideBubbleBigRight{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainorange) 0.85vw 0.85vw 0, var(--mainorange) 10px 10px 60px -12px;
+    }
+
+    #sideBubbleMediumLeft{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--brightred) -0.65vw 0.65vw 0, var(--mainred) -10px 10px 60px -12px;
+    }
+
+    #sideBubbleMediumRight{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainpurple) 0.65vw 0.65vw 0, var(--mainpurple) 10px 10px 60px -12px;
+    }
+
+    #sideBubbleSmallLeft{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--maingreen) -0.45vw 0.45vw 0, var(--maingreen) -10px 10px 60px -12px;
+    }
+
+    #sideBubbleSmallRight{
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 20px, var(--mainblue) 0.45vw 0.45vw 0, var(--mainblue) 10px 10px 60px -12px;
+    }
+
+    .mainText{
+        font-size: 6.7vw;
+    }
+    .mainDescription{
+        font-size: 5.3vw;
+        margin-top: -1vw;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    
+    .section1finish{
+        height: 16vw;
+    }
+
+    .section1textbox{
+        margin-top: calc(150px - 15vw);
+    }
+    
+}
+
+@media only screen and (max-width: 800px) {
+    
+    
+    .mainText{
+        font-size: 54px;
+    }
+    .mainDescription{
+        font-size: 43px;
+        margin-top: -9px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .section1{
+        height: 140vw;
+    }
+
 }
 
 /*section2*/
 
 .section2,.section3{
-    height: 1300px;
+    height: 1400px;
     display: flex;
     width: 100%;
+    
 }
 
 .section2{
     position: relative;
     z-index: 0;
     background-image: linear-gradient(-120deg, var(--mainpurple) -200%,transparent 40%), linear-gradient(120deg, var(--maingreen) -200%,var(--maingrey) 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3{
+    position: relative;
+    z-index: 0;
+    background-image: linear-gradient(50deg, var(--mainred) -200%,transparent 40%), linear-gradient(-50deg, var(--mainpurple) -200%,var(--maingrey) 30%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,6 +456,26 @@
     align-items: center;
 }
 
+.section2boxsubsection2{
+    width: 1185px;
+    background-color: var(--frontgrey);
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
+    display: flex;
+    column-gap: 35px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.section2servicecardcontainer{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 5px;
+
+}
 
 .section2textbox{
     width: max-content;
@@ -320,13 +500,6 @@
 
 }
 
-.section2servicecardcontainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 5px;
-
-}
 
 .section2servicecard{
     width: 240px;
@@ -345,25 +518,8 @@
     line-height: 30px;
 }
 
-.section2servicecard:hover{
-  display: none;
-}
 
 /*section2 subsection2*/
-
-
-.section2boxsubsection2{
-    width: 1185px;
-    background-color: var(--frontgrey);
-    border-bottom-right-radius: 17px;
-    border-top-right-radius: 17px;
-    display: flex;
-    column-gap: 35px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex: 1;
-}
 
 .gallerycontainer{
     background-color: transparent;
@@ -409,8 +565,102 @@
     transform: scale(110%);
 }
 
+@media only screen and (max-width: 1600px) {
+    .section2box{
+        transform: scale(80%);
+    }
+}
 
 
+@media only screen and (max-width: 1200px) {
+    
+    .section2,.section3{
+        height: 1800px;
+    }
+    
+    .section2box{
+        flex-direction: column;
+        align-items: center;
+        height: 1200px;
+        transform: scale(70%);
+    }
+
+    .section2boxsubsection1{
+        width: 1185px;
+        height: 280px;
+        flex-direction: row;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 17px;
+        border-top-left-radius: 17px;
+        gap: 25px;
+    }
+
+    .section2boxsubsection2{
+        width: 1185px;
+        height: 870px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 17px;
+        border-bottom-right-radius: 17px;
+    }
+
+    .section2servicecardcontainer{
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .section2textbox{
+        width: max-content;
+        height: max-content;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    
+    .section2box{
+        transform: scale(80%);
+        margin-top: -750px;
+    }
+    
+    .section2boxsubsection2{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 620px;
+        height: 2500px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 0;
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+
+    .section2boxsubsection1{
+        width: 620px;
+        height: 1000px;
+    }
+    
+    .section2servicecardcontainer{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0;
+        column-gap: 50px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 700px) {
+
+
+    .section2box{
+        margin-top: -550px;
+        transform: scale(60%);
+    }
+    
+
+}
 
 @keyframes floatanimation {
     0% {transform: translateY(0)}

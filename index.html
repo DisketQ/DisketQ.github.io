@@ -31,41 +31,42 @@
         </button>
     </div>    
 </div>
-<div class="section1container">
 <div class="section1">
     <div class="sideSection1">
         <div class="sideBubbleBig" id="sideBubbleBigLeft">
-            <img width="137" height="137" src="Icons/GamepadIcon.png" alt="controller"/>
+            <img class="imgbig" src="Icons/GamepadIcon.png" alt="controller"/>
         </div>
         <div class="sideBubbleMedium" id="sideBubbleMediumLeft">
-            <img width="93" height="93" src="Icons/WebIcon.png" alt="controller"/>
+            <img class="imgmedium" src="Icons/WebIcon.png" alt="controller"/>
         </div>
         <div class="sideBubbleSmall" id="sideBubbleSmallLeft">
-            <img width="70" height="70" src="Icons/DesignIcon.png" alt="controller"/>
+            <img class="imgsmall" src="Icons/DesignIcon.png" alt="controller"/>
         </div>
     </div>
 
-    <div class="middleSection1">
+    <div class="middleSection">
         <div class="mainBubble">
             
         </div>
-        <div class="mainText">
-        SAVE SOFTWARE
-        </div>
-        <div class="mainDescription">
-         WE <span style="color: var(--maincyan); text-shadow: var(--maincyanbrighter) 0 0 6px; ">CREATE</span> FOR YOU
+        <div class="section1textbox">
+            <div class="mainText">
+                SAVE SOFTWARE
+            </div>
+            <div class="mainDescription">
+                WE <span style="color: var(--maincyan); text-shadow: var(--maincyanbrighter) 0 0 6px; ">CREATE</span> FOR YOU
+            </div>
         </div>
     </div>
 
     <div class="sideSection2">
         <div class="sideBubbleBig" id="sideBubbleBigRight">
-            <img style="transform: scaleX(-1)" width="137" height="137" src="Icons/CubeIcon.png" alt="controller"/>
+            <img class="imgbig" style="transform: scaleX(-1)" src="Icons/CubeIcon.png" alt="controller"/>
         </div>
         <div class="sideBubbleMedium" id="sideBubbleMediumRight">
-            <img width="92" height="93" src="Icons/SovaleIcon.png" alt="controller"/>
+            <img class="imgmedium" src="Icons/SovaleIcon.png" alt="controller"/>
         </div>
         <div class="sideBubbleSmall" id="sideBubbleSmallRight">
-            <img width="70" height="70" src="Icons/CodeIcon.png" alt="controller"/>
+            <img class="imgsmall" src="Icons/CodeIcon.png" alt="controller"/>
         </div>
     </div>
 </div>
@@ -95,68 +96,113 @@
         </div>
     </div>
     
-    <div class="section2">
-       <div class="section2box">
-           <div class="section2boxsubsection1">
-               <div class="section2textbox">
-                   <div class="section2maintext">
-                       OUR SERVICES
-                   </div>
-                   <div class="section2maindescription">
-                       we make <span style="color: var(--maincyanbrighter); font-weight: bolder; text-shadow: var(--maincyanbrighter) 0 0 4px;">your life easier</span>
-                   </div>
-               </div>
-               
-               <div class="section2servicecardcontainer">
-                   <div class="section2servicecard cyantext">
-                       GAME DEVELOPMENT <br> GAME DESIGN <br> GAMIFICATION
-                   </div>
-                   <div class="section2servicecard orangetext">
-                       3D GAME ART <br> PRODUCT MODELLING <br> PRODUCT RENDER
-                   </div>
-                   <div class="section2servicecard redtext">
-                       WEB DEVELOPMENT <br> WEB DESIGN <br> SERVER INTEGRATION
-                   </div>
-                   <div class="section2servicecard greentext">
-                       APPLICATION UI/UX <br> LOGO/BANNER DESIGN <br> ADVERTISING DESIGN
-                   </div>
-               </div>
-               
-           </div>
-           <div class="section2boxsubsection2">
-               <div class="gallerycontainer">
-                   <div class="gallerytext cyantext">GAME DEVELOPMENT</div>
-                   <div class="gallerycard"></div>
-                   <button class="gallerybutton cyanbackground">SEE MORE</button>
-               </div>
-               <div class="gallerycontainer">
-                   <div class="gallerytext orangetext">3D ART</div>
-                   <div class="gallerycard"></div>
-                   <button class="gallerybutton orangebackground">SEE MORE</button>
-               </div>
-               <div class="gallerycontainer">
-                   <div class="gallerytext redtext">WEB DEVELOPMENT</div>
-                   <div class="gallerycard"></div>
-                   <button class="gallerybutton redbackground">SEE MORE</button>
-               </div>
-               <div class="gallerycontainer">
-                   <div class="gallerytext greentext">UI/UX DESIGN</div>
-                   <div class="gallerycard"></div>
-                   <button class="gallerybutton greenbackground">SEE MORE</button>
-               </div>
-           </div>
-       </div>
+<div class="section2">
+    <div class="section2box">
+        <div class="section2boxsubsection1">
+            <div class="section2textbox">
+                <div class="section2maintext">
+                    OUR SERVICES
+                </div>
+                <div class="section2maindescription">
+                    we make <span style="color: var(--maincyanbrighter); font-weight: bolder; text-shadow: var(--maincyanbrighter) 0 0 4px;">your life easier</span>
+                </div>
+            </div>
+
+            <div class="section2servicecardcontainer">
+                <div class="section2servicecard cyantext">
+                    GAME DEVELOPMENT <br> GAME DESIGN <br> GAMIFICATION
+                </div>
+                <div class="section2servicecard orangetext">
+                    3D GAME ART <br> PRODUCT MODELLING <br> PRODUCT RENDER
+                </div>
+                <div class="section2servicecard redtext">
+                    WEB DEVELOPMENT <br> WEB DESIGN <br> SERVER INTEGRATION
+                </div>
+                <div class="section2servicecard greentext">
+                    APPLICATION UI/UX <br> LOGO/BANNER DESIGN <br> ADVERTISING DESIGN
+                </div>
+            </div>
+
+        </div>
+        <div class="section2boxsubsection2">
+            <div class="gallerycontainer">
+                <div class="gallerytext cyantext">GAME DEVELOPMENT</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton cyanbackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext orangetext">3D ART</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton orangebackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext redtext">WEB DEVELOPMENT</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton redbackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext greentext">UI/UX DESIGN</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton greenbackground">SEE MORE</button>
+            </div>
+        </div>
     </div>
 </div>
 
-
+<div style="height: 200px; width: 100%; background-color: white">
+    
+</div>
 
 <div class="section3">
-    <div class="subsection2">
-        
-    </div>
-    <div class="subsection1">
-        
+    <div class="section2box">
+        <div class="section2boxsubsection1">
+            <div class="section2textbox">
+                <div class="section2maintext">
+                    OUR SERVICES
+                </div>
+                <div class="section2maindescription">
+                    we make <span style="color: var(--maincyanbrighter); font-weight: bolder; text-shadow: var(--maincyanbrighter) 0 0 4px;">your life easier</span>
+                </div>
+            </div>
+
+            <div class="section2servicecardcontainer">
+                <div class="section2servicecard cyantext">
+                    GAME DEVELOPMENT <br> GAME DESIGN <br> GAMIFICATION
+                </div>
+                <div class="section2servicecard orangetext">
+                    3D GAME ART <br> PRODUCT MODELLING <br> PRODUCT RENDER
+                </div>
+                <div class="section2servicecard redtext">
+                    WEB DEVELOPMENT <br> WEB DESIGN <br> SERVER INTEGRATION
+                </div>
+                <div class="section2servicecard greentext">
+                    APPLICATION UI/UX <br> LOGO/BANNER DESIGN <br> ADVERTISING DESIGN
+                </div>
+            </div>
+
+        </div>
+        <div class="section2boxsubsection2">
+            <div class="gallerycontainer">
+                <div class="gallerytext cyantext">GAME DEVELOPMENT</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton cyanbackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext orangetext">3D ART</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton orangebackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext redtext">WEB DEVELOPMENT</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton redbackground">SEE MORE</button>
+            </div>
+            <div class="gallerycontainer">
+                <div class="gallerytext greentext">UI/UX DESIGN</div>
+                <div class="gallerycard"></div>
+                <button class="gallerybutton greenbackground">SEE MORE</button>
+            </div>
+        </div>
     </div>
 </div>
 
