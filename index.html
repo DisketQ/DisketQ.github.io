@@ -127,29 +127,53 @@
         <div class="section2boxsubsection2">
             <div class="gallerycontainer">
                 <div class="gallerytext cyantext">GAME DEVELOPMENT</div>
-                <div class="gallerycard"></div>
+                <div class="gallerycard">
+                    <img src="Gallery/gamedevimage1.png"  class="gallerymedia">
+                    <img src="Gallery/gamedevimage2.png" class="gallerymedia">
+                    <img src="Gallery/gamedevimage3.png" class="gallerymedia">
+                    <img src="Gallery/gamedevimage4.png" class="gallerymedia">
+                    <img src="Gallery/gamedevimage5.png" class="gallerymedia">
+                </div>
                 <button class="gallerybutton cyanbackground">SEE MORE</button>
             </div>
             <div class="gallerycontainer">
                 <div class="gallerytext orangetext">3D ART</div>
-                <div class="gallerycard"></div>
+                <div class="gallerycard">
+                    <img src="Gallery/3dartimage1.png" class="gallerymedia">
+                    <img src="Gallery/3dartimage2.png" class="gallerymedia">
+                    <img src="Gallery/3dartimage3.png" class="gallerymedia">
+                    <img src="Gallery/3dartimage4.png" class="gallerymedia">
+                    <img src="Gallery/3dartimage5.png" class="gallerymedia">
+                </div>
                 <button class="gallerybutton orangebackground">SEE MORE</button>
             </div>
             <div class="gallerycontainer">
                 <div class="gallerytext redtext">WEB DEVELOPMENT</div>
-                <div class="gallerycard"></div>
+                <div class="gallerycard">
+                    <img src="Gallery/webimage1.png" class="gallerymedia">
+                    <img src="Gallery/webimage2.png" class="gallerymedia">
+                    <img src="Gallery/webimage3.png" class="gallerymedia">
+                    <img src="Gallery/webimage4.png" class="gallerymedia">
+                    <img src="Gallery/webimage5.png" class="gallerymedia">
+                </div>
                 <button class="gallerybutton redbackground">SEE MORE</button>
             </div>
             <div class="gallerycontainer">
                 <div class="gallerytext greentext">UI/UX DESIGN</div>
-                <div class="gallerycard"></div>
+                <div class="gallerycard">
+                    <img src="Gallery/uiimage1.png" alt="" class="gallerymedia">
+                    <img src="Gallery/uiimage2.png" class="gallerymedia">
+                    <img src="Gallery/uiimage3.png" class="gallerymedia">
+                    <img src="Gallery/uiimage4.png" class="gallerymedia">
+                    <img src="Gallery/uiimage5.png" class="gallerymedia">
+                </div>
                 <button class="gallerybutton greenbackground">SEE MORE</button>
             </div>
         </div>
     </div>
 </div>
 
-<div style="height: 200px; width: 100%; background-color: white">
+<div style="height: 20px; width: 100%; background-color: var(--frontgrey)">
     
 </div>
 
@@ -206,16 +230,13 @@
     </div>
 </div>
 
+<!-- The Modal -->
+<div id="mainModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modalcontent" id="mainModalImage">
+</div>
 
 </body>
 
-<script>
-    onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}
-    
-    function GetMouseDistance(objectPosition,mousePosition) 
-    {
-        objectPosition.x
-    }
-</script>
-
+<script type="text/javascript" src="Javascript/mainpagejs.js"></script>
 </html>
