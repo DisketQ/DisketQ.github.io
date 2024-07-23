@@ -12,16 +12,22 @@ for (let i = 0; i < collection.length; i++){
     }
 }
 
+/*modal*/
 function SetModal(imgsrc){
     modalImage.src = imgsrc;
 }
 
+modal.onclick = closeModal;
+modalImage.onclick = closeModal;
+
 const collection2 = document.getElementsByClassName("close")
 
 for (let i = 0; i < collection2.length; i++){
-    collection2[i].onclick = function (){
-        modal.style.display = "none";
-    }
+    collection2[i].onclick = closeModal();
+}
+
+function closeModal(){
+    modal.style.display = "none";
 }
 
 /*
