@@ -7,7 +7,7 @@ console.log(collection.length)
 
 for (let i = 0; i < collection.length; i++){
     collection[i].onclick= function (){
-        modal.style.display = "block";
+        modal.style.display = "flex";
         SetModal(collection[i].src)
     }
 }
