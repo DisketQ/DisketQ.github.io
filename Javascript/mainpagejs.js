@@ -1,7 +1,7 @@
-let modal = document.getElementById("mainModal");
-let modalImage = document.getElementById("mainModalImage")
+let modal = document.getElementById("main-modal");
+let modalImage = document.getElementById("main-modal-image")
 
-const collection = document.getElementsByClassName("gallerymedia")
+const collection = document.getElementsByClassName("gallery-media")
 
 console.log(collection.length)
 
