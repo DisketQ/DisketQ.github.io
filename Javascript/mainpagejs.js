@@ -47,17 +47,17 @@ function GetMouseDistance(objectPosition,mousePosition)
 var particles = [];
 
 // The amount of particles to render
-var particleCount = 60;
+var particleCount = 30;
 
 // The maximum velocity in each direction
-var maxVelocity = 1;
+var maxVelocity = 0.7;
 
 // The target frames per second (how often do we want to update / redraw the scene)
-var targetFPS = 33;
+var targetFPS = 30;
 
 // Set the dimensions of the canvas as variables so they can be used.
 var canvasWidth = 400;
-var canvasHeight = 300;
+var canvasHeight = 250;
 
 // Create an image object (only need one instance)
 var imageObj = new Image();
@@ -70,7 +70,7 @@ imageObj.onload = function() {
 };
 
 // Once the callback is arranged then set the source of the image
-imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
+imageObj.src = "https://clipart-library.com/img/1887240.png";
 
 // A function to create a particle object.
 function Particle(context) {
@@ -95,10 +95,15 @@ function Particle(context) {
         // If an image is set draw it
         if(this.image){
           
-            let newAlpha = (this.y - 200) * 0.05;
+            let newAlpha = (this.y - 190) * 0.05;
             this.context.globalAlpha = Math.max(0,Math.min(newAlpha,1));
+            
+            if(newAlpha <= 0){
+                this.y = canvasHeight;
+            }
+            
             this.context.drawImage(this.image, this.x-128, this.y-128,128,128);
-            this.context.globalAlpha = 0.01;
+            this.context.globalAlpha = 1;
             // If the image is being rendered do not draw the circle so break out of the draw function           
  
             return;
@@ -132,7 +137,7 @@ function Particle(context) {
 
         // Check if has crossed the top edge
         else if (this.y <= 0) {
-        
+            this.yVelocity = maxVelocity;
             this.y = canvasHeight;
         }
     };
