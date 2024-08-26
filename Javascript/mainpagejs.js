@@ -50,7 +50,7 @@ var particles = [];
 var particleCount = 30;
 
 // The maximum velocity in each direction
-var maxVelocity = 0.7;
+var maxVelocity = 0.3;
 
 // The target frames per second (how often do we want to update / redraw the scene)
 var targetFPS = 30;
@@ -68,6 +68,7 @@ imageObj.onload = function() {
         particle.setImage(imageObj);
     });
 };
+
 
 // Once the callback is arranged then set the source of the image
 imageObj.src = "https://clipart-library.com/img/1887240.png";
@@ -95,15 +96,20 @@ function Particle(context) {
         // If an image is set draw it
         if(this.image){
           
-            let newAlpha = (this.y - 190) * 0.05;
-            this.context.globalAlpha = Math.max(0,Math.min(newAlpha,1));
+            let newAlpha = (this.y - 200) * 0.05;
+            this.context.beginPath()
+            //this.context.fillStyle = "red";
+            //this.context.fillRect(this.x-128,this.y-128,128,128);
+            this.context.globalAlpha = Math.max(0,Math.min(newAlpha,0.5));
             
             if(newAlpha <= 0){
                 this.y = canvasHeight;
             }
             
             this.context.drawImage(this.image, this.x-128, this.y-128,128,128);
-            this.context.globalAlpha = 1;
+            this.context.globalAlpha = 0.5;
+            
+            this.context.closePath()
             // If the image is being rendered do not draw the circle so break out of the draw function           
  
             return;
