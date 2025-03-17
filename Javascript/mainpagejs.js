@@ -5,16 +5,40 @@ const collection = document.getElementsByClassName("gallery-media")
 
 console.log(collection.length)
 
+/*
 for (let i = 0; i < collection.length; i++){
     collection[i].onclick= function (){
-        modal.style.display = "flex";
         SetModal(collection[i].src)
     }
 }
+ */
+
+let directQuery = document.querySelectorAll('[direct]');
+
+for (let i = 0; i < directQuery.length; i++) {
+    directQuery[i].onclick = function () {
+        window.open(directQuery[i].getAttribute('direct'));
+    }
+}
+
+let galleryButtons = document.getElementsByClassName('gallery-button')
+
+for (let i = 0; i < galleryButtons.length; i++) {
+    console.log("ZAA")
+    galleryButtons[i].onclick = function (){window.open('ProjectGallery.html')}
+}
 
 /*modal*/
-function SetModal(imgsrc){
-    modalImage.src = imgsrc;
+function SetModal(imgsrc, modaltype = 'img'){
+    modal.style.display = "flex";
+    
+    let newModal = document.createElement(modaltype);
+    newModal.className = modalImage.className;
+    newModal.src = imgsrc;
+    modalImage.parentElement.insertBefore(newModal,modalImage.parentElement.firstElementChild);
+    
+    modalImage.remove();
+    modalImage = newModal;
 }
 
 modal.onclick = closeModal;
@@ -101,13 +125,13 @@ function Particle(context) {
             //this.context.fillStyle = "red";
             //this.context.fillRect(this.x-128,this.y-128,128,128);
             this.context.globalAlpha = Math.max(0,Math.min(newAlpha,0.5));
-            
             if(newAlpha <= 0){
                 this.y = canvasHeight;
             }
-            
             this.context.drawImage(this.image, this.x-128, this.y-128,128,128);
+            
             this.context.globalAlpha = 0.5;
+            
             
             this.context.closePath()
             // If the image is being rendered do not draw the circle so break out of the draw function           

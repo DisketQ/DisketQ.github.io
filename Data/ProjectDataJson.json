@@ -1,0 +1,98 @@
+﻿{
+  "projectArray" : [
+    {
+    "id" : "Test0",
+    "name":"Bir Proje",
+    "description":"IT WORKS! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a diam ut enim posuere viverra in id ante. Donec tincidunt, nisl eget consectetur tincidunt, lacus massa tristique lorem, eget hendrerit dolor risus eu tellus. Duis eu augue sem. Suspendisse laoreet ultrices felis, at euismod velit mattis sed. Suspendisse in urna ipsum. Vestibulum malesuada hendrerit convallis. Vivamus facilisis ex in tristique egestas. Etiam turpis diam, aliquet in rhoncus arcu.",
+      
+      
+    "links":"",
+    "content":[
+      {
+        "type" : "img",
+        "url": "Gallery/3dartimage1.jpg"
+      },
+      {
+        "type" : "img",
+        "url": "Gallery/3dartimage2.jpg"
+      },
+      {
+        "type" : "img",
+        "url": "Gallery/3dartimage5.jpg"
+      },
+      {
+        "type" : "iframe",
+        "url": "https://www.youtube.com/embed/39YKrkrsFsM?si=73V0ss_v49fJjEyp"
+      }
+    ,
+      {
+        "type" : "iframe",
+        "url": "https://itch.io/embed/2916400"
+      }
+    ]
+  }
+    , 
+    {
+      "id" : "Adventourism",
+      "name":"Adventourism",
+      "description":"Our in-house project 'Adventourism' is a 4 player party game inspired by famous tabletop game 'Dungeons & Dragons' focused around battling between players, leveling up, looting and conquering dungeons on their way. <br> <br> Release Date <br> Q3 2025",
+
+
+      "links":"https://www.youtube.com/watch?v=OD6q7HJOPT8&t=2s",
+      "content":[
+        {
+          "type" : "iframe",
+          "url": "https://www.youtube.com/embed/OD6q7HJOPT8?si=Cz0zTe7w-_YG7mHS"
+        },
+        {
+          "type" : "img",
+          "url": "Gallery/Games/Adventourism/Adventourism (1).jpg"
+        }
+      ,
+        {
+          "type" : "img",
+          "url": "Gallery/Games/Adventourism/Adventourism (2).jpg"
+        }
+      ,
+        {
+          "type" : "img",
+          "url": "Gallery/Games/Adventourism/Adventourism (3).jpg"
+        }
+      ,
+        {
+          "type" : "img",
+          "url": "Gallery/Games/Adventourism/Adventourism (4).jpg"
+        }
+      ,
+        {
+          "type" : "img",
+          "url": "Gallery/Games/Adventourism/Adventourism (7).jpg"
+        }
+      
+      ]
+    }
+    ,
+    {
+      "id" : "Cubeman",
+      "name":"CubeMan",
+      "description":"Our in-house project 'CubeMan' is a puzzle platformer game inspired by games like 'Inside' and 'Limbo' <br> <br> Release Date -",
+
+
+      "links":"https://www.youtube.com/watch?v=OD6q7HJOPT8&t=2s",
+      "content":[
+        {
+          "type" : "iframe",
+          "url": "https://www.youtube.com/embed/OD6q7HJOPT8?si=Cz0zTe7w-_YG7mHS"
+        },
+        {
+          "type" : "img",
+          "url": "Gallery/Games/CubeMan/CubemanImage1.jpg"
+        },
+        {
+          "type" : "img",
+          "url": "Gallery/Games/CubeMan/CubemanImage2.jpg"
+        }
+      ]
+    }
+  ]
+}

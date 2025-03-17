@@ -1,5 +1,6 @@
 ﻿:root{
     --maingrey: #222831;
+    --darkergrey: #171b21;
     --maincyan: #87FFFF;
     --maincyanbrighter: #73FBFD;
     --mainred: #FF6060;
@@ -22,7 +23,9 @@
     font-size: 18px;
     font-weight: 700;
     max-width: 100%;
+    
     overflow-x: hidden;
+
 
     
 }
@@ -181,6 +184,7 @@ button{
     box-shadow:  var(--maincyanbrighter) 5px 10px 0,var(--maincyanbrighter) -5px 10px 0, var(--maincyanbrighter) 0 0 20px 0px;
     min-width: 150px;
     min-height: 150px;
+    justify-content: center;
 }
 
 .side-bubble-l{
@@ -232,6 +236,11 @@ button{
     animation-name: floatanimation3;
 }
 
+.main-bubble-img{
+    width: 60%;
+    
+}
+
 .l-bubble-img{
     width: 137px;
     height: 137px;
@@ -246,6 +255,8 @@ button{
     width: 70px;
     height: 70px;
 }
+
+
 
 /*section-1 text*/
 
@@ -588,6 +599,7 @@ button{
     min-width: 0;
     overflow-clip-margin: unset;
     transition: transform 0.1s, box-shadow 0.1s;
+    object-fit: cover;
 }
 
 .gallery-media:hover {
@@ -1032,7 +1044,7 @@ button{
     position: relative;
     width: 100%;
     height: 100px;
-    z-index: 20;
+    z-index: 2;
     display: flex;
     align-items: center;
     text-align: center;
@@ -1045,6 +1057,10 @@ button{
     flex: 1 0 auto; 
     text-align: left; 
     margin-left: 40px;
+}
+
+.footer-img{
+    height: 80px;
 }
 
 .footer-links {
@@ -1097,8 +1113,9 @@ button{
         margin: 10px 0;
     }
 
-    .footer-logo{
-        transform: scale(0.8);
+
+    .footer-img{
+        height: 80px;
     }
 
     .footer-links {
@@ -1115,6 +1132,7 @@ button{
         font-size: 20px; 
         margin-top: 20px;
         text-align: center;
+        padding-bottom: 20px;
     }
 }
 
@@ -1209,6 +1227,13 @@ button{
     background-color: var(--mainorange);
 }
 
+@keyframes textNeonShineAnimationCyan {
+    
+    0% {text-shadow: var(--maincyanbrighter) 0 0 6px; color: var(--maincyanbrighter); }
+    50% {text-shadow: var(--maincyanbrighter) 0 0 0px; color: var(--maincyanbrighter);}
+    100% {text-shadow: var(--maincyanbrighter) 0 0 6px; color: var(--maincyanbrighter); }
+}
+
 /* Slider */
 
 
@@ -1263,6 +1288,11 @@ button{
     }
 }
 
+.soft-shadow{
+    box-shadow: rgba(0,0,0,0.5) 0 0 30px 5px;
+}
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -1278,13 +1308,21 @@ button{
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.modal-panel{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 /* Modal Content (image) */
 .modal-content {
     margin: auto;
     height: 80%;
+    width: 80%;
     justify-self: center;
     align-self: center;
-    border-radius: 15px;
+
+    object-fit: scale-down;
+
 }
 
 /* Add Animation */
@@ -1325,9 +1363,10 @@ button{
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1200px){
     .modal-content {
         width: 100%;
+
     }
 }
 
@@ -1337,6 +1376,7 @@ button{
     position: absolute;
     z-index: 10;
     width: 100%;
-    height: 100%;
+    height: 60vw;
+    bottom: 0;
 
 }
