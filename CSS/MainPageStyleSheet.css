@@ -600,6 +600,8 @@ button{
     overflow-clip-margin: unset;
     transition: transform 0.1s, box-shadow 0.1s;
     object-fit: cover;
+    outline: blue 50px;
+
 }
 
 .gallery-media:hover {

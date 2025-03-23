@@ -81,17 +81,18 @@
       "links":"https://www.youtube.com/watch?v=OD6q7HJOPT8&t=2s",
       "content":[
         {
-          "type" : "iframe",
-          "url": "https://www.youtube.com/embed/OD6q7HJOPT8?si=Cz0zTe7w-_YG7mHS"
-        },
-        {
           "type" : "img",
           "url": "Gallery/Games/CubeMan/CubemanImage1.jpg"
         },
         {
           "type" : "img",
           "url": "Gallery/Games/CubeMan/CubemanImage2.jpg"
+        },
+        {
+          "type" : "img",
+          "url": "Gallery/Games/CubeMan/CubemanImage3.jpg"
         }
+        
       ]
     }
   ]
