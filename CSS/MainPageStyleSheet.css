@@ -23,12 +23,13 @@
     font-size: 18px;
     font-weight: 700;
     max-width: 100%;
-    
-    overflow-x: hidden;
-
-
-    
+    overflow-x: hidden; 
 }
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
 
 button{
     font-family: "League Spartan", sans-serif;
@@ -106,7 +107,6 @@ button{
 }
 
 /*section-1*/
-
 .section-1{
     height: 1000px;
     width: 100%;
@@ -160,7 +160,6 @@ button{
 }
 
 /*section-1 bubbles*/
-
 .main-bubble, .side-bubble-l,.side-bubble-m,.side-bubble-s{
     border-radius: 50%;
     background-color: var(--frontgrey);
@@ -238,7 +237,6 @@ button{
 
 .main-bubble-img{
     width: 60%;
-    
 }
 
 .l-bubble-img{
@@ -256,10 +254,7 @@ button{
     height: 70px;
 }
 
-
-
 /*section-1 text*/
-
 .section-1-textbox{
     min-width: 500px;
 }
@@ -398,7 +393,6 @@ button{
 }
 
 /*section-2, section-3*/
-
 .section-2, .section-3{
     height: 1000px;
     display: flex;
@@ -409,7 +403,6 @@ button{
 .section-3{
     flex-direction: column;
     padding-bottom: 100px;
-    
 
 }
 
@@ -437,7 +430,6 @@ button{
 }
 
 /* section-2 subsection-1*/
-
 .section-2-box-subsection-1, .section-2-box-subsection-2, 
 .section-3-box-subsection-1, .section-3-box-subsection-2{
     box-shadow: rgba(0,0,0,25%) 0 0 30px 4px ;
@@ -497,7 +489,7 @@ button{
     height: 135px;
     background-color: var(--frontgrey);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 32px -7px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 0px;
     margin-bottom: 40px;
     font-size: 17px;
     display: flex;
@@ -540,7 +532,6 @@ button{
 
 
 /*section-2 subsection-2*/
-
 .gallery-container {
     background-color: transparent;
     width: 240px;
@@ -560,6 +551,7 @@ button{
 
 .gallery-card {
     background-color: var(--maingrey);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 0px;
     height: 100%;
     width: 100%;
     border-radius: 10px;
@@ -578,7 +570,7 @@ button{
     color: var(--frontgrey);
     font-size: 18px;
     font-weight: 600;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 24px 0px;
     border-color: transparent;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -600,7 +592,6 @@ button{
 
 .gallery-media {
     background-color: var(--frontgrey);
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 30px;
     width: 100%;
     height: 100%;
     overflow-clip-margin: unset;
@@ -620,6 +611,7 @@ button{
     width: 100%;
     overflow: hidden;
     display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 7px;
     object-fit: cover;
@@ -649,7 +641,6 @@ button{
     width: 50%;
 }
 
-
 /* Responsive Design */
 
 @media only screen and (max-width: 1600px) {
@@ -662,7 +653,6 @@ button{
         transform: scale(0.8);
     }
 }
-
 
 @media only screen and (max-width:1300px) {
     
@@ -829,8 +819,6 @@ button{
     font-size: 36px;
 }
 
-
-
 .contact-image {
     width: 360px;
     height: 360px;
@@ -840,8 +828,6 @@ button{
     position: relative;
     z-index: 1;
 }
-
-
 
 .blur-effect {
     border-radius: 50%;
@@ -919,18 +905,43 @@ button{
     border-radius: 50%;
     background-color: var(--frontgrey);
     box-shadow: 0px 0px 9px 5px currentColor;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border: none;
+    overflow: hidden;
+    transition: all 0.5s ease;;
 }
 
 .social-bubble img {
     width: 24px;
     height: 24px;
 }
+
+.holographic-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      0deg, 
+      transparent, 
+      transparent 40%, 
+      currentColor
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .holographic-button:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
 
 .linkedin-bubble {
     color: var(--maincyanbrighter);
@@ -958,14 +969,13 @@ button{
     justify-content: center;
     align-items: center;
     height: 100%;
- 
 }
 
 .mail-box {
     height: 85%;
     width: 500px;
     background-color: #30343D;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 0px;
     border-radius: 17px;
     display: flex;
     flex-direction: column;
@@ -1035,6 +1045,7 @@ button{
     width: 180px;
     height: 52px;
     background-color: var(--brightgreen);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 0px;
     border-radius: 10px;
     border: none;
     text-align: center;
@@ -1044,6 +1055,7 @@ button{
 
 .send-mail-button:hover {
     transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0 4px 20px;
 }
 
 .send-mail-text {
@@ -1078,7 +1090,6 @@ button{
     text-align: center;
     background-image: linear-gradient(170deg, var(--mainred) -200%,transparent 50%), linear-gradient(-170deg, var(--mainpurple) -200%,var(--maingrey) 40%);
     box-shadow: rgba(0,0,0,0.1) 0 -10px 20px;
-   
 }
 
 .footer-logo {
@@ -1178,8 +1189,6 @@ button{
     }
 }
 
-
-
 @keyframes floatanimation {
     0% {transform: translateY(0)}
     50% {transform: translateY(-5px)}
@@ -1204,20 +1213,17 @@ button{
     100% {transform: translateY(0) translateX(0)}
 }
 
-
 @keyframes floatanimation3 {
     0% {transform: translateY(0) translateX(0) scale(100%)}
     50% {transform: translateY(-10px) translateX(-5px) scale(100%)}
     100% {transform: translateY(0) translateX(0) scale(100%)}
 }
 
-
 @keyframes floatanimation3reverse {
     0% {transform: translateY(0) translateX(0) scale(100%)}
     50% {transform: translateY(-10px) translateX(5px) scale(100%)}
     100% {transform: translateY(0) translateX(0) scale(100%)}
 }
-
 
 .cyan-text{
     color: var(--maincyanbrighter);
@@ -1264,7 +1270,6 @@ button{
 
 /* Slider */
 
-
 .double-sided-gradient{
     background: linear-gradient(90deg,transparent 80%,var(--maingrey) 100%), linear-gradient(-90deg,transparent 80%,var(--maingrey) 100%);
     width: 100%;
@@ -1287,13 +1292,11 @@ button{
     height: 100%;
 }
 
-
 .slide-container {
     display: flex;
     align-items: center;
     padding-left: 0;
     height: 100%;
-
 }
 
 /* Banner */
@@ -1319,7 +1322,6 @@ button{
 .soft-shadow{
     box-shadow: rgba(0,0,0,0.5) 0 0 30px 5px;
 }
-
 
 /* The Modal (background) */
 .modal {
@@ -1348,9 +1350,7 @@ button{
     width: 80%;
     justify-self: center;
     align-self: center;
-
     object-fit: scale-down;
-
 }
 
 /* Add Animation */
@@ -1406,6 +1406,5 @@ button{
     width: 100%;
     height: 60vw;
     bottom: 0;
-
 }
 
